@@ -33,15 +33,15 @@ app.get("/api/:date", function (req, res) {
   }
 
   res.json({
-    unix: new Date().getTime(),
-    utc : new Date().toUTCString()
+    unix: date.getTime(),
+    utc : date.toUTCString()
   });
 });
 
 app.get("/api", (req, res) => {
   res.json({
-    unix: date.getTime(),
-    utc : date.toUTCString()
+    unix: new Date().getTime(),
+    utc : new Date().toUTCString()
   });
 })
 
